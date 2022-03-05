@@ -16,14 +16,14 @@ namespace UserRegistrationRegularExPr
             {
                 Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
+                ValidationRegex Checkpattern = new ValidationRegex();
                 switch (option)
                 {
                     case 1:
                         Console.WriteLine("*First letter should be capital.");
                         Console.WriteLine("*length should be Minimum three characters.");
                         Console.WriteLine("Enter First name :");
-                        string fname = Console.ReadLine();
-                        ValidationRegex Checkpattern = new ValidationRegex();
+                        string fname = Console.ReadLine();                       
                         Checkpattern.Checkfirstname(fname);
                         break;
                     case 2:
