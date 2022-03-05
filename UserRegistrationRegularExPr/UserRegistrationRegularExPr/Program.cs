@@ -14,8 +14,8 @@ namespace UserRegistrationRegularExPr
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2. Validate Lastname " +
-                 "\n3. Validate EmailID \n4. MobileFormat \n5. Password Validation \n6. Exit");
+                Console.WriteLine("\n Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
+                    "\n3.Validate EmailID \n4.MobileFormat \n5.Validate Password \n6.Validation of SampleMails \n7.Exit");
                 ValidationRegex Checkpattern = new ValidationRegex();
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -25,6 +25,7 @@ namespace UserRegistrationRegularExPr
                         Console.WriteLine("*length should be Minimum three characters.");
                         Console.WriteLine("Enter First name :");
                         string fname = Console.ReadLine();
+
                         Checkpattern.Checkfirstname(fname);
                         break;
                     case 2:
@@ -50,6 +51,9 @@ namespace UserRegistrationRegularExPr
                         Checkpattern.Checkpassward(passward);
                         break;
                     case 6:
+                        ValidationRegex.SampleEmail();
+                        break;
+                    case 7:
                         flag = false;
                         break;
                     default:
