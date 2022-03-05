@@ -15,7 +15,8 @@ namespace UserRegistrationRegularExPr
             while (flag)
             {
                 Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2.Validate Lastname " +
-                    "\n3. Exit");                
+                    "\n3. Validate EmailID \n4. Exit");
+
                 ValidationRegex Checkpattern = new ValidationRegex();
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -31,10 +32,15 @@ namespace UserRegistrationRegularExPr
                         Console.WriteLine("*First letter should be capital.");
                         Console.WriteLine("*length should be Minimum three characters.");
                         Console.WriteLine("Enter Last name :");
-                        string lname = Console.ReadLine();                        
+                        string lname = Console.ReadLine();
                         Checkpattern.Checklastname(lname);
                         break;
                     case 3:
+                        Console.WriteLine("Enter Email id :");
+                        string email = Console.ReadLine();
+                        Checkpattern.Checkemail(email);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:
